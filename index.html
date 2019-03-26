@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Oswald" rel="stylesheet">
+  <style>
+    body {
+      background-color: grey;
+    }
+
+    .box {
+      background-color: red;
+      width: 400px;
+      height: 250px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+    }
+
+    .whiteBox {
+      background-color: white;
+      width: 400px;
+      height: 125px;
+      position: absolute;
+      left: 50%;
+      top: 56%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .hello {
+      color: white;
+      font-size: 3em;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .name {
+      color: black;
+      font-size: 3em;
+      margin-top: 25px;
+      font-family: 'Baloo Chettan', cursive;
+    }
+
+    p.small {
+      line-height: 1;
+    }
+  </style>
+
+
+  <script>
+    function inputForm(newName) {
+     //  console.log(newName);
+      document.getElementById('name').innerHTML = newName;
+    }
+  </script>
+
+</head>
+<body>
+  <form>
+    <input type="text" id="newName" placeholder="First Name"><br>
+    <!-- <input type="text" name="LastName" placeholder="Last Name"><br> -->
+    <input type="button" onclick="inputForm(newName.value);" value="Submit" />
+  </form>
+
+  <div class="box text-align-center">
+    <p class="text-center hello small">Hello <br> my name is</p>
+  </div>
+  <div class="whiteBox text-align-center">
+    <p class="text-center name" id=name></p>
+  </div>
+
+
+
+</body>
+
+
+</html>
